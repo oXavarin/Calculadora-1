@@ -23,7 +23,6 @@ namespace Calculator
         public MainWindow()
         {
             InitializeComponent();
-            int a2 = 2;
         }
     }
 }
