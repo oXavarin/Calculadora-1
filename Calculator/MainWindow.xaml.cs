@@ -23,6 +23,8 @@ namespace Calculator
         public MainWindow()
         {
             InitializeComponent();
+
+            string a1 = "asd";
         }
     }
 }
