@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="525" Width="350">
+        Title="MainWindow" Height="525" Width="450">
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -28,145 +28,179 @@
             <Label VerticalAlignment="Bottom"
                HorizontalAlignment="Right"
                 Content="0"
-               FontSize="80"
-               Name="Display"/>
+               FontSize="40"
+               x:Name="Display"/>
         </Border>
         <!-- AC -->
-        <Button Content="AC"
+        <Button x:Name="borrar"
+                Content="AC"
                 Grid.Column="0"
                 Grid.Row="1"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="borrar_Click"/>
         <!-- +/1 -->
-        <Button Content="+/1"
+        <Button x:Name="negativo"
+                Content="+/1"
                 Grid.Column="1"
                 Grid.Row="1"
                 FontSize="20"
                 FontWeight="Bold"
                 Margin="2"/>
         <!-- % -->
-        <Button Content="%"
+        <Button x:Name="porcentaje"
+                Content="%"
                 Grid.Column="2"
                 Grid.Row="1"
                 FontSize="20"
                 FontWeight="Bold"
                 Margin="2"/>
         <!-- / -->
-        <Button Content="/"
+        <Button x:Name="dividir"
+                Content="/"
                 Grid.Column="3"
                 Grid.Row="1"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="operacion"/>
         <!-- 7 -->
-        <Button Content="7"
+        <Button x:Name="n7"
+                Content="7"
                 Grid.Column="0"
                 Grid.Row="2"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="Click"/>
         <!-- 8 -->
-        <Button Content="8"
+        <Button x:Name="n8"
+                Content="8"
                 Grid.Column="1"
                 Grid.Row="2"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="Click"/>
         <!-- 9 -->
-        <Button Content="9"
+        <Button x:Name="n9"
+                Content="9"
                 Grid.Column="2"
                 Grid.Row="2"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="Click"/>
         <!-- * -->
-        <Button Content="*"
+        <Button x:Name="multiplicar"
+                Content="*"
                 Grid.Column="3"
                 Grid.Row="2"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="operacion"/>
         <!-- 4 -->
-        <Button Content="4"
+        <Button x:Name="n4"
+                Content="4"
                 Grid.Column="0"
                 Grid.Row="3"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="Click"/>
         <!-- 5 -->
-        <Button Content="5"
+        <Button x:Name="n5"
+                Content="5"
                 Grid.Column="1"
                 Grid.Row="3"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="Click"/>
         <!-- 6 -->
-        <Button Content="6"
+        <Button x:Name="n6"
+                Content="6"
                 Grid.Column="2"
                 Grid.Row="3"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="Click"/>
         <!-- - -->
-        <Button Content="-"
+        <Button x:Name="restar"
+                Content="-"
                 Grid.Column="3"
                 Grid.Row="3"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="operacion"/>
         <!-- 1 -->
-        <Button Content="1"
+        <Button x:Name="n1"
+                Content="1"
                 Grid.Column="0"
                 Grid.Row="4"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="Click"/>
         <!-- 2 -->
-        <Button Content="2"
+        <Button x:Name="n2"
+                Content="2"
                 Grid.Column="1"
                 Grid.Row="4"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="Click"/>
         <!-- 3 -->
-        <Button Content="3"
+        <Button x:Name="n3"
+                Content="3"
                 Grid.Column="2"
                 Grid.Row="4"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="Click"/>
         <!-- + -->
-        <Button Content="+"
+        <Button x:Name="sumar"
+                Content="+"
                 Grid.Column="3"
                 Grid.Row="4"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="operacion"/>
         <!-- AC -->
-        <Button Content="0"
+        <Button x:Name="n0"
+                Content="0"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
                 Grid.Row="5"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="n0_Click"/>
         <!-- . -->
-        <Button Content="."
+        <Button x:Name="punto"
+                Content="."
                 Grid.Column="2"
                 Grid.Row="5"
                 FontSize="20"
                 FontWeight="Bold"
                 Margin="2"/>
         <!-- = -->
-        <Button Content="="
+        <Button x:Name="resultado"
+                Content="="
                 Grid.Column="3"
                 Grid.Row="5"
                 FontSize="20"
                 FontWeight="Bold"
                 Margin="2"
                 Background="AliceBlue"
-                Click="Resultado"/>
+                Click="resultado_Click"/>
 
     </Grid>
 </Window>
