@@ -29,7 +29,13 @@ namespace Calculator
         {
             InitializeComponent();
             punto.Click += Punto_Click;
+            porcentaje.Click += Porcentaje_Click;
 
+        }
+
+        private void Porcentaje_Click(object sender, RoutedEventArgs e)
+        {
+            Display.Content = $"{(Convert.ToDouble(Display.Content) / 100)}";
         }
 
         private void Punto_Click(object sender, RoutedEventArgs e)
@@ -44,7 +50,13 @@ namespace Calculator
                 Display.Content = "";
                 presionado = true;
             }
-            Display.Content += (string)((Button)sender).Content;
+            Display.Content += $"{((Button)sender).Content}";
+
+            // $"{}" ES LO MISMO QUE (String) ... Un parse de toda a vida:
+            // Display.Content += (string)((Button)sender).Content;
+
+            // O tipo tamen usa (sender as button) o cal fai o mesmo que ((button)sender) ca diferencia que o primeiro non da fallo se sender non e un boton, e retornará NULL
+
         }
 
         private void n0_Click(object sender, RoutedEventArgs e)
@@ -92,7 +104,8 @@ namespace Calculator
             }
             num1 = Convert.ToDouble(Display.Content);
         }
-        /// ESTOU NESTA PARTE INCOMPLETO (no video 0.3 > 2)
+
+        
         private void negativo_Click(object sender, RoutedEventArgs e)
         {
             Display.Content = (Convert.ToDouble(Display.Content) * -1).ToString();  
