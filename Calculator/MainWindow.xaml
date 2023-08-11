@@ -47,7 +47,8 @@
                 Grid.Row="1"
                 FontSize="20"
                 FontWeight="Bold"
-                Margin="2"/>
+                Margin="2"
+                Click="negativo_Click"/>
         <!-- % -->
         <Button x:Name="porcentaje"
                 Content="%"

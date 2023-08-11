@@ -21,16 +21,22 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        Boolean presionado = false;
+        Boolean presionado, igual = false;
         string operation;
-        double num1 = 0;
-        double num2;
-        Boolean igual = false;
+        double num1, num2;
+
         public MainWindow()
         {
             InitializeComponent();
+            punto.Click += Punto_Click;
+
         }
-        
+
+        private void Punto_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
         private void Click(object sender, RoutedEventArgs e)
         {
             if (!presionado)
@@ -45,10 +51,9 @@ namespace Calculator
         {
             if (!presionado)
             { 
-
                 Display.Content = "0";
             }
-            if (Display.Content != "0")
+            if (Display.Content.ToString() != "0")
             {
                 Display.Content += "0";
             }
@@ -86,6 +91,11 @@ namespace Calculator
                     break;
             }
             num1 = Convert.ToDouble(Display.Content);
+        }
+        /// ESTOU NESTA PARTE INCOMPLETO (no video 0.3 > 2)
+        private void negativo_Click(object sender, RoutedEventArgs e)
+        {
+            Display.Content = (Convert.ToDouble(Display.Content) * -1).ToString();  
         }
 
         private void borrar_Click(object sender, RoutedEventArgs e)
