@@ -40,7 +40,11 @@ namespace Calculator
 
         private void Punto_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (!Display.Content.ToString().Contains(","))
+            {
+                presionado = true;
+                Display.Content = $"{Display.Content},";
+            }
         }
 
         private void Click(object sender, RoutedEventArgs e)
